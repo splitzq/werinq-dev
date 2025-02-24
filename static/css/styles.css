@@ -1,1 +1,26 @@
+.container {
+    width: 500px;
+    padding: 10px;
+    border: 10px solid black;
+    text-align: center;
+}
 
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.containerEhey {
+    width: 500px;
+    padding: 10px;
+    border: 10px solid purple;
+    text-align: center;
+
+    margin-top: -375px;
+    margin-left: 550px;
+}
+
+.containerEhey img {
+    width: 100%;
+    height: auto;
+}
