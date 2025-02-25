@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic%20Neue:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap">
+
+        <title>werinq</title>
+    </head>
+
+    <body>
+        <div class="mainContainer">
+            <div class="top-container">
+                <p>werinq (@splitzzz.q_alt)</p>
+            </div>
+
+            <div class="left-container">
+                <video autoplay muted loop>
+                    <source src="{{ url_for('static', filename='videos/cat-car.mp4')}}" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="right-container">
+                <h1>About Me!</h1>
+                <p class="about-me">Welcome to my portfolio, where you can explore my past projects and see what I've been working on. <br> <br>I'm a developer with about four years of experience, specializing in scripting and graphics design. My passion is scripting, and I'm proficient in LuaU (Roblox Lua) and Python. I'm also relatively new to the world of graphics design, but I'm eager to learn and grow in this area. <br><br> On the left you can my official socials and my portfolio. I would be glad if we could work together and I'm looking forward to help you!</p>
+            </div>
+
+            <div class="bottom-container">
+                <button id="portfolioButton">View Portfolio</button>
+            </div>
+
+            <p class="bottom-text">~ pls dont steal my work thank u ~</p>
+        </div>
+
+        <div id="particles-js"></div> <!-- fixed id (no dots) -->
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>
