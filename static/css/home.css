@@ -1,3 +1,8 @@
+:root {
+    --background-Color: #252524;
+    --accent-color: #ff4d00;
+}
+
 .mainContainer {
     position: relative;
     z-index: 1;
@@ -10,6 +15,22 @@
     padding: 10px;
 
     border: 0px solid black;
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeInMove 0.75s forwards;
+}
+
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(-55px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .mainContainer .top-container {
@@ -18,8 +39,8 @@
     height: 65px;
     z-index: 100;
 
-    background-color: #252424;
-    border: 5px solid #5050ff;
+    background-color: var(--background-Color);
+    border: 5px solid var(--accent-color);
     border-radius: 5px;
 }
 
@@ -53,8 +74,8 @@
 
     margin-top: 15px;
 
-    background-color: #252424;
-    border: 5px solid #5050ff;
+    background-color: var(--background-Color);
+    border: 5px solid var(--accent-color);
     border-radius: 5px;
 }
 
@@ -67,8 +88,8 @@
     margin-left: 370px;
     margin-top: -349.6px;
 
-    background-color: #252424;
-    border: 5px solid #5050ff;
+    background-color: var(--background-Color);
+    border: 5px solid var(--accent-color);
     border-radius: 5px;
 }
 
@@ -80,8 +101,8 @@
 
     margin-top: -190px;
 
-    background-color: #252424;
-    border: 5px solid #5050ff;
+    background-color: var(--background-Color);
+    border: 5px solid var(--accent-color);
     border-radius: 5px;
 }
 
@@ -122,9 +143,9 @@
 #portfolioButton {
     position: relative;
 
-    background: rgba(80, 80, 255, 0.15);
-    border: 2px solid #4a4acf;
-    color: #4a4acf;
+    background: var(--accent-color)26;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
 
     font-family: "Play", sans-serif;
     font-weight: 600;
