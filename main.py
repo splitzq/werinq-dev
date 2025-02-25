@@ -9,11 +9,11 @@ def home():
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template('index.html')
+    return render_template('portfolio.html')
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('notfound.html'), 404
+@app.errorhandler(Exception)
+def error(e):
+    return render_template('error.html', error=str(e)), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

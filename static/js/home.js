@@ -8,10 +8,6 @@ document.getElementById("portfolioButton").addEventListener("click", function() 
     alert("button clicked!");
 });
 
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 window.onload = async function() {
     const mainContainers = document.getElementsByClassName('mainContainer')
 
@@ -19,5 +15,4 @@ window.onload = async function() {
         const mainContainer = mainContainers[0]
         mainContainer.classList.add("fade-in")
     }
-
 }

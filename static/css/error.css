@@ -43,10 +43,25 @@ h1 {
     margin-left: -750px;
 }
 
+.fade-in {
+    animation: fadeInMove 0.75s forwards;
+}
+
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(-55px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 #goHome {
     position: relative;
 
-    background: var(--accent-color)26;
+    background: var(--accent-color)10;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
 
@@ -59,8 +74,52 @@ h1 {
     align-items: center;
     font-size: 15px;
 
-    width: 175px;
+    width: 200px;
     height: 40px;
+
+    animation: buttonUnhover 0.5s forwards;
+}
+
+@keyframes buttonHover {
+    to {
+        position: relative;
+        background-color: #ff4d0026;
+        width: 200px;
+        height: 40px;
+    }
+}
+
+@keyframes buttonUnhover {
+    to {
+        position: relative;
+
+        background-color: inherit;
+        width: 175px;
+        height: 40px;
+    }
+}
+
+@keyframes buttonPress {
+    to { transform: scale(0.95); }
+}
+
+@keyframes buttonRelease {
+    to { transform: scale(1); }
+}
+
+#goHome:hover {
+    position: relative;
+    width: 175px;
+
+    animation: buttonHover 0.5s forwards;
+}
+
+#goHome:not(:hover) {
+    animation: buttonUnhover 0.5s forwards;
+}
+
+#goHome:active {
+    animation: buttonPress 0.1s forwards;
 }
 
 #particles-js {
