@@ -9,12 +9,21 @@ def home():
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template('portfolio.html')
+    return render_template('portsfolio.html')
 
 @app.errorhandler(Exception)
-def error(e):
-    return render_template('error.html', error=str(e)), 500
+def handle_error(e):
+    code = getattr(e, "code", 500)  # get status code, default to 500
+    name = getattr(e, "name", "Internal Server Error")  # get reason
+
+    if code == 404:
+        name = "Page Not Found"  # override name
+
+    if code == 500:
+        name = "Internal Server Error"
+
+    return render_template('error.html', code=code, name=name), code
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=False)
+    app.run(host="0.0.0.0", port=port, debug=True)
