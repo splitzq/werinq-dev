@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
         <meta name="color-scheme" content="light dark">
 
@@ -22,27 +22,44 @@
     </head>
 
     <body>
-        <div class="mainContainer">
-            <div class="top-container">
-                <p>werinq (@splitzzz.q_alt)</p>
-            </div>
 
-            <div class="left-container">
-                <video autoplay muted loop>
-                    <source src="{{ url_for('static', filename='videos/cat-car.mp4')}}" type="video/mp4">
-                </video>
+        <div class="screenContainer">
+            <div class="topContainer">
+                <button id="topButton" class="socialsButton">Socials</button>
+                <button id="topButton" class="homeButton">Home</button>
+                <button id="topButton" class="portfolioButton">Portfolio</button>
             </div>
+    
+            <div class="mainContainer">
+                <div id="containerAboutMe" class="container center">
+                    <img src="https://cdn.discordapp.com/avatars/1199049872960143361/93aae67f300d2a02b65ba935552f0de4.webp?size=1024&width=1024&height=1024", id="myPFP">
+    
+                    <div id="aboutMeUsernameContainer">
+                        <p id="aboutMeUsernameText">werinq (@splitzzz.q_alt)</p>
+                    </div>
+    
+                    <div id="aboutMeContainer">
+                        <p id="aboutMeText">Hello! Welcome to my website.
+                            You can look around for now. I do scripting and graphics design. See my works by going to Portfolio at the top!</p>
+                    </div>
+                </div>
 
-            <div class="right-container">
-                <h1>About Me!</h1>
-                <p class="about-me">Welcome to my portfolio, where you can explore my past projects and see what I've been working on. <br> <br>I'm a developer with about four years of experience, specializing in scripting and graphics design. My passion is scripting, and I'm proficient in LuaU (Roblox Lua) and Python. I'm also relatively new to the world of graphics design, but I'm eager to learn and grow in this area. <br><br> On the left you can my official socials and my portfolio. I would be glad if we could work together and I'm looking forward to help you!</p>
+                <div id="whatCanIDo">
+                    <p id="whatCanIDoLabel">~ i do: ~</p>
+                    <p id="whatCanIDoText">- simple UI design <br>- roblox <-> discord <br>- simple GFX <br>- organized code <br>- almost everything!!!</P>
+                    <p id="whatCanIDoDisclaimer">feel free to ask something thats not on the list</p>
+                </div>
+
+                <div id="whatCanINotDo">
+                    <p id="whatCanINotDoLabel">~ i don't do: ~</p>
+                    <p id="whatCanINotDoText">- gun systems <br>- anything against any tos <br>- GFX blender renders <br>- combat systems <br>- entire frameworks</P>
+                    <p id="whatCanINotDoDisclaimer">this list does not show everything i don't do</p>
+                </div>
+
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
             </div>
-
-            <div class="bottom-container">
-                <button id="portfolioButton">View Portfolio</button>
-            </div>
-
-            <p class="bottom-text" id="bottomText">~ pls dont steal my work thank u ~</p>
         </div>
 
         <div id="particles-js"></div> <!-- fixed id (no dots) -->

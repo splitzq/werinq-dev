@@ -1,164 +1,295 @@
 :root {
-    --background-Color: #252524;
+    --background-Color: #111111;
     --accent-color: #ff4d00;
 }
 
+.screenContainer {
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .mainContainer {
-    position: relative;
-    z-index: 1;
+    width: 500px;
+    height: 1000px;
 
     margin: auto;
-    transform: translateY(25px);
 
-    width: 750px;
-    height: 750px;
-    padding: 10px;
-
-    border: 0px solid black;
-    opacity: 0;
+    border: 0px solid #ffffff;
+    z-index: 1;
 }
 
-.fade-in {
-    animation: fadeInMove 0.75s forwards;
-}
+#containerAboutMe {
 
-@keyframes fadeInMove {
-    from {
-        opacity: 0;
-        transform: translateY(-55px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
+    width: 550px;
+    height: 230px;
 
-.mainContainer .top-container {
-    position: relative;
-    width: 350px;
-    height: 65px;
-    z-index: 100;
+    margin: auto;
+    transform: translateX(-35px);
 
     background-color: var(--background-Color);
-    border: 5px solid var(--accent-color);
-    border-radius: 5px;
-}
-
-.top-container p {
-    color: #ffffff;
-    font-family: 'Comic Neue', sans-serif;
-    font-weight: bold;
-
-    font-size: 175%;
-
-    margin-left: 35px;
-    margin-top: 16px;
-}
-
-.left-container video {
+    border: 1px solid var(--accent-color);
     border-radius: 10px;
-    
-    object-fit: cover;
 
-    width: 323px;
-    height: 220px;
-    margin-top: 16px;
-    margin-left: 14px;
+    z-index: 1;
 }
 
-.mainContainer .left-container {
-    position: relative;
-    width: 350px;
-    height: 250px;
-    z-index: 100;
-
-    margin-top: 15px;
-
-    background-color: var(--background-Color);
-    border: 5px solid var(--accent-color);
-    border-radius: 5px;
-}
-
-.mainContainer .right-container {
-    position: relative;
-    width: 350px;
-    height: 550px;
-    z-index: 100;
-
-    margin-left: 370px;
-    margin-top: -349.6px;
-
-    background-color: var(--background-Color);
-    border: 5px solid var(--accent-color);
-    border-radius: 5px;
-}
-
-.mainContainer .bottom-container {
-    position: relative;
-    width: 350px;
+#myPFP {
+    width: 180px;
     height: 180px;
-    z-index: 100;
 
-    margin-top: -190px;
+    transform: translateY(20px) translateX(15px);
 
-    background-color: var(--background-Color);
-    border: 5px solid var(--accent-color);
+    border: 4.5px solid #2b2b2b;
     border-radius: 5px;
 }
 
-[class="bottom-text"] {
-    color: gray;
-    opacity: 50%;
+#aboutMeUsernameContainer {
+    background-color: #110f0f;
 
-    margin-top: 25px;
-    margin-left: 200px;
+    border: 3.5px solid #2b2b2b;
 
-    font-size: 125%;
+    width: 295px;
+    height: 25px;
+
+    border-radius: 5px;
+
+    transform: translateY(-172.5px) translateX(220px);
 }
 
-.right-container h1 {
-    color: #ffffff;
+#aboutMeUsernameText {
+    margin-top: 2px;
+    margin-left: 5px;
+
+    color: #c1c1c1;
+
     font-family: "Comic Neue", sans-serif;
     font-weight: bold;
-
-    margin-left: 15px;
-    margin-top: 10px;
 }
 
-[class="about-me"] {
-    position: relative;
-    color: #dfd8d8;
-    font-family: "Helvetica", sans-serif;
-    font-weight: lighter;
+#aboutMeText {
+    width: 295px;
+    height: 20px;
 
-    width: 300px;
+    margin-left: 3.5px;
+
+    transform: translateY(-13px);
+
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    font-size: 115%;
+
+    color: #909090;
+
+    text-align: start;
+}
+
+#aboutMeContainer {
+    background-color: #110f0f;
+
+    border: 3.5px solid #2b2b2b;
+
+    width: 295px;
+    height: 145px;
+
+    text-align: center;
+    border-radius: 5px;
+
+    transform: translateY(-170px) translateX(220px);
+}
+
+.topContainer {
+
+    width: 500px;
+    height: 100px;
+
+    margin: auto;
+
+    border: 0px solid #ffffff;
+}
+
+#line1 {
+    margin: auto;
+
+    width: 2px;
+    height: 100px;
+
+    transform: translateY(-504px) translateX(-8px);
+    opacity: 0.431;
+
+    
+
+    background-color: var(--accent-color);
+}
+
+#line2 {
+    margin: auto;
+
+    width: 2px;
+    height: 100px;
+
+    transform: translateY(-504px) translateX(-190px);
+    opacity: 0.431;
+
+    
+
+    background-color: var(--accent-color);
+}
+
+#topButton {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+
+    width: 20px;
+}
+  
+#topButton::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #ff4d00, #f22805);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+  
+#topButton:hover::after {
+    transform: scaleX(1);
+}
+
+
+#topButton {
+    font-family: "Play", sans-serif;
+    font-size: 120%;
+    color: #dcdad9;
+    font-weight: bold;
+
+    width: 100px;
+    height: 25px;
+
+    margin-top: 20px;
+    margin-left: 45px;
+
+    background: transparent;
+    border: transparent;
+}
+
+#whatCanIDo {
+    width: 245px;
     height: 250px;
 
-    margin-left: 14px;
-    margin-top: -10px;
+    background-color: var(--background-Color);
+    border: 1px solid var(--accent-color);
 
-    font-size: 125%;
+    border-radius: 10px;
+
+    transform: translateY(17px) translateX(-35px);
 }
 
-#portfolioButton {
-    position: relative;
+#whatCanIDoLabel {
+    text-align: center;
+    transform: translateY(-15px);
 
-    background: var(--accent-color)26;
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
+    font-family: "Comic Neue", sans-serif;
+    font-size: 145%;
+    font-weight: bold;
 
-    font-family: "Play", sans-serif;
-    font-weight: 600;
-    size: 100px;
+    color: #c1c1c1;
+}
 
-    margin-top: 10px;
-    margin-left: 10px;
+#whatCanIDoText {
+    width: 245px;
+    height: 240px;
 
-    align-items: center;
-    font-size: 15px;
+    text-align: left;
+    transform: translateX(20px) translateY(-27px);
 
-    width: 175px;
-    height: 40px;
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: #909090;
+
+}
+
+#whatCanIDoDisclaimer {
+    opacity: 0.431;
+
+    width: 245px;
+    height: 50px;
+
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 65%;
+
+    transform: translateY(-100px);
+
+    color: #909090;
+}
+
+#whatCanINotDo {
+    width: 245px;
+    height: 250px;
+
+    background-color: var(--background-Color);
+    border: 1px solid var(--accent-color);
+
+    border-radius: 10px;
+
+    transform: translateY(-233px) translateX(270px);
+}
+
+#whatCanINotDoLabel {
+    text-align: center;
+    transform: translateY(-15px);
+
+    font-family: "Comic Neue", sans-serif;
+    font-size: 145%;
+    font-weight: bold;
+
+    color: #c1c1c1;
+}
+
+#whatCanINotDoText {
+    width: 245px;
+    height: 240px;
+
+    text-align: left;
+    transform: translateX(15px) translateY(-27px);
+
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: #909090;
+
+}
+
+#whatCanINotDoDisclaimer {
+    opacity: 0.431;
+
+    width: 245px;
+    height: 50px;
+
+    font-family: "Comic Neue", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 65%;
+
+    transform: translateY(-100px);
+
+    color: #909090;
 }
 
 #particles-js {
@@ -168,5 +299,7 @@
     width: 100%;
     height: 100vh;
     background: #0d0d0d;
-    z-index: 0;
+    z-index: -1;
+
+    pointer-events: none;
 }

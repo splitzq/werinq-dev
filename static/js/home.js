@@ -1,18 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    particlesJS.load('particles-js', '/static/js/particles.json', function() {
-        console.log("particles.js loaded successfully!");
-    });
-});
+// document.getElementById("portfolioButton").addEventListener("click", function() {
+//    alert("button clicked!");
+//});
 
-document.getElementById("portfolioButton").addEventListener("click", function() {
-    alert("button clicked!");
-});
+//window.onload = async function() {
+//    const mainContainers = document.getElementsByClassName('mainContainer')
+//
+  //  if (mainContainers.length > 0) {
+    //    const mainContainer = mainContainers[0]
+      //  mainContainer.classList.add("fade-in")
+    //}
+//}
 
-window.onload = async function() {
-    const mainContainers = document.getElementsByClassName('mainContainer')
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = new Audio("/static/music/themeSong.mp3")
+  const playMusic = document.getElementById('playMusic')
 
-    if (mainContainers.length > 0) {
-        const mainContainer = mainContainers[0]
-        mainContainer.classList.add("fade-in")
-    }
-}
+  audio.volume = 0.010
+
+  playMusic.addEventListener("click", () => {
+    audio.play()
+  })
+})
